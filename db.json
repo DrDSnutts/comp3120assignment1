@@ -1,9 +1,23 @@
 {
-  "products": [],
-  "orders": [],
+  "products": [
+    {"id": 1, "name": "test1"}
+  ],
+  "orders": [
+    {"id": 1, "user_id": "1", "products": [{"product_id": 1}]}
+  ],
   "categories": [
-    { "id": 1, "name": "electronics", "friendlyName": "Electronics" },
-    { "id": 2, "name": "clothing", "friendlyName": "Clothing" },
-    { "id": 3, "name": "books", "friendlyName": "Books" }
-  ]
+    { "id": 1, "name": "electronics", "friendlyName": "Electronics" }
+  ],
+  "tags": [
+    "tag1", "tag2"
+  ],
+  "users": [
+    {
+        "id": 1,
+        "name": "john doe"
+    }
+  ],
+  "session": {
+    "user_id": 1
+  }
 }
