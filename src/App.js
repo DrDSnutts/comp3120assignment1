@@ -21,12 +21,16 @@ function App(){
 
   
 
-  return(
-    <div className="App">
-      <h1>Store</h1>
-      <h2>Products</h2>
+  return (
+    <div className="products">
+      {products.map(product => (
+        <div key={product.id} className="product">
+          <h2>{product.name}</h2>
+          <p>${product.price}</p>
+        </div>
+      ))}
     </div>
-  )
+  );
 }
 
 export default App;
