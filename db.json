@@ -1,0 +1,9 @@
+{
+  "products": [],
+  "orders": [],
+  "categories": [
+    { "id": 1, "name": "electronics", "friendlyName": "Electronics" },
+    { "id": 2, "name": "clothing", "friendlyName": "Clothing" },
+    { "id": 3, "name": "books", "friendlyName": "Books" }
+  ]
+}
