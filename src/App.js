@@ -11,11 +11,11 @@ function App(){
 
   useEffect(() => {
     // Fetch products from the server
-    axios.get('/products')
+    axios.get('http://localhost:3001/products')
       .then(response => setProducts(response.data))
     
     // Fetch user's orders
-    axios.get('/orders?user_id=1')
+    axios.get('http://localhost:3001/orders?user_id=1')
       .then(response => setOrders(response.data))
   }, []);
 
