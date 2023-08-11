@@ -3,34 +3,28 @@ import axios from 'axios'
 import './App.css';
 
 function App(){
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState([ ])
   const [cart, setCart] = useState([])
   const [orders, setOrders] = useState([])
-  const [user, setUser] = ({id:1})
 
   console.log()
 
-  //fetch products
   useEffect(() => {
-    fetch('/products')
-      .then(response => response.json())
-      .then(data => setProducts(data));
-  });
-
- 
-
-  //fetch user orders
-  useEffect(() => {
-    fetch(`/orders?user_id=${user.id}`)
-      .then(response => response.json())
-      .then(data => setOrders(data));
-  }, [user.id]);
+    // Fetch products from the server
+    axios.get('/products')
+      .then(response => setProducts(response.data))
+    
+    // Fetch user's orders
+    axios.get('/orders?user_id=1')
+      .then(response => setOrders(response.data))
+  }, []);
 
   
 
   return(
-    <div>
-      <h1>Test</h1>
+    <div className="App">
+      <h1>Store</h1>
+      <h2>Products</h2>
     </div>
   )
 }
